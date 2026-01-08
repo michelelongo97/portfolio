@@ -1,3 +1,7 @@
 export default function Footer() {
-  return <div>footer</div>;
+  return (
+    <footer className="bg-dark text-light text-center py-3">
+      <small>© {new Date().getFullYear()} - Portfolio Developer</small>
+    </footer>
+  );
 }
