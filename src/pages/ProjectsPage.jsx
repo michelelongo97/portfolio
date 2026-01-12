@@ -14,7 +14,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <h1 className="mb-4 text-center">I miei progetti</h1>
+      <h1 className="section-title text-center">I miei progetti</h1>
 
       <div className="d-flex justify-content-center gap-2 mb-4 flex-wrap">
         {allStacks.map((tech, i) => (

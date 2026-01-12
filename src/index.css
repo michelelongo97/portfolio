@@ -1,0 +1,39 @@
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  min-height: 70vh;
+}
+
+header,
+footer {
+  min-height: 15vh;
+}
+
+.hero {
+  padding: 5rem 1rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
+  color: white;
+}
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
