@@ -3,38 +3,55 @@ import { Link } from "react-router-dom";
 export default function ProjectCard({ project }) {
   return (
     <div className="col-md-6 col-lg-4">
-      <Link
-        to={`/projects/${project.id}`}
-        className="text-decoration-none text-dark"
-      >
-        <div className="card shadow-sm h-100">
-          <div className="card-body">
-            <h5>{project.title}</h5>
-            <p>{project.description}</p>
+      <div className="card h-100 shadow-sm overflow-hidden">
+        {/* IMAGE */}
+        <img
+          src={`/${project.image}`}
+          className="card-img-top"
+          alt={project.title}
+          style={{ height: "180px", objectFit: "cover" }}
+        />
 
-            <div className="mb-2">
-              {project.stack.map((tech, i) => (
-                <span key={i} className="badge bg-secondary me-1">
-                  {tech}
-                </span>
-              ))}
-            </div>
+        <div className="card-body d-flex flex-column">
+          <h5 className="fw-bold">{project.title}</h5>
+          <p className="text-muted flex-grow-1">{project.description}</p>
 
-            <div className="d-flex gap-2">
-              <a
-                href={project.github}
-                className="btn btn-dark btn-sm"
-                target="_blank"
-              >
-                GitHub
-              </a>
-              <a href={project.demo} className="btn btn-outline-primary btn-sm">
-                Live
-              </a>
-            </div>
+          <div className="mb-2">
+            {project.stack.map((tech, i) => (
+              <span key={i} className="badge bg-secondary me-1">
+                {tech}
+              </span>
+            ))}
           </div>
+
+          {/* BUTTONS */}
+          <div className="d-flex gap-2 mt-3">
+            <a
+              href={project.github}
+              target="_blank"
+              className="btn btn-dark btn-sm w-50"
+            >
+              <i className="fab fa-github me-1"></i> GitHub
+            </a>
+
+            <a
+              href={project.demo}
+              target="_blank"
+              className="btn btn-outline-primary btn-sm w-50"
+            >
+              <i className="fas fa-globe me-1"></i> Live
+            </a>
+          </div>
+
+          {/* LINK DETTAGLIO */}
+          <Link
+            to={`/projects/${project.id}`}
+            className="btn btn-link btn-sm mt-2 p-0"
+          >
+            Dettagli progetto →
+          </Link>
         </div>
-      </Link>
+      </div>
     </div>
   );
 }
