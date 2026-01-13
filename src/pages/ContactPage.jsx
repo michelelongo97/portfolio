@@ -12,34 +12,74 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="card p-4 shadow-sm col-md-6 mx-auto">
-      <h1>Contattami</h1>
+    <div className="row g-4">
+      {/* FORM CARD */}
+      <div className="col-md-6">
+        <div className="card p-4 shadow-sm h-100">
+          <h3 className="mb-3">Scrivimi</h3>
 
-      <form onSubmit={handleSubmit} className="mt-3">
-        <input
-          className="form-control mb-2"
-          name="name"
-          placeholder="Nome"
-          onChange={handleChange}
-        />
+          <form onSubmit={handleSubmit}>
+            <input
+              className="form-control mb-3"
+              name="name"
+              placeholder="Nome"
+              onChange={handleChange}
+            />
 
-        <input
-          className="form-control mb-2"
-          name="email"
-          placeholder="Email"
-          onChange={handleChange}
-        />
+            <input
+              className="form-control mb-3"
+              name="email"
+              placeholder="Email"
+              onChange={handleChange}
+            />
 
-        <textarea
-          className="form-control mb-2"
-          name="message"
-          rows="4"
-          placeholder="Messaggio"
-          onChange={handleChange}
-        />
+            <textarea
+              className="form-control mb-3"
+              name="message"
+              rows="5"
+              placeholder="Messaggio"
+              onChange={handleChange}
+            />
 
-        <button className="btn btn-primary mt-2">Invia</button>
-      </form>
+            <button className="btn btn-primary w-100">Invia messaggio</button>
+          </form>
+        </div>
+      </div>
+
+      {/* INFO CARD */}
+      <div className="col-md-6">
+        <div className="card p-4 shadow-sm h-100">
+          <h3 className="mb-3">I miei contatti</h3>
+
+          <p>
+            📍 <strong>Località:</strong> Italia
+          </p>
+          <p>
+            ✉️ <strong>Email:</strong> tuamail@email.com
+          </p>
+
+          <p>
+            💻 <strong>GitHub:</strong>{" "}
+            <a href="https://github.com/tuonome" target="_blank">
+              github.com/tuonome
+            </a>
+          </p>
+
+          <p>
+            🔗 <strong>LinkedIn:</strong>{" "}
+            <a href="https://linkedin.com/in/tuonome" target="_blank">
+              linkedin.com/in/tuonome
+            </a>
+          </p>
+
+          <hr />
+
+          <p className="text-muted">
+            Sono disponibile per opportunità come Junior Frontend / Full Stack
+            Developer.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

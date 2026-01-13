@@ -29,4 +29,13 @@ export const projects = [
     demo: "#",
     image: "books.png",
   },
+  {
+    id: 4,
+    title: "Portfolio",
+    description: "questo sito",
+    stack: ["React", "Express", "MySQL"],
+    github: "https://github.com/michelelongo97/portfolio",
+    demo: "#",
+    image: "books.png",
+  },
 ];
