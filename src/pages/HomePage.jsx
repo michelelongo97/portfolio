@@ -28,28 +28,70 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HERO */}
-      <div className="hero text-center mb-5">
-        <h1 className="display-4 fw-bold">Junior Full Stack Developer</h1>
-        <p className="lead mt-3">
-          Costruisco applicazioni moderne con React, Node ed Express.
-        </p>
+      {/* HERO FULLSCREEN */}
+      <div className="hero-full vh-100 d-flex align-items-center bg-dark text-light">
+        <div className="container-fluid px-5">
+          <div className="row align-items-center">
+            {/* TESTO */}
+            <div className="col-md-7 text-center text-md-start">
+              <h1 className="display-4 fw-bold mb-3">
+                Ciao, sono <span className="text-primary">Michele Longo</span>
+              </h1>
 
-        <div className="mt-4">
-          <a
-            className="btn btn-light btn-lg me-3"
-            href={import.meta.env.VITE_CV}
-          >
-            Scarica CV
-          </a>
-          <a className="btn btn-outline-light btn-lg" href="/projects">
-            Vedi Progetti
-          </a>
+              <h2 className="fw-semibold mb-3">Junior Full Stack Developer</h2>
+
+              <p className="lead opacity-75">
+                Trasformo idee in applicazioni web moderne con React, Node ed
+                Express.
+              </p>
+
+              <div className="mt-4 d-flex flex-wrap gap-3 justify-content-center justify-content-md-start">
+                <a
+                  className="btn btn-primary btn-lg"
+                  href={import.meta.env.VITE_CV}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fas fa-file-download me-2"></i> Scarica CV
+                </a>
+
+                <a className="btn btn-outline-light btn-lg" href="/projects">
+                  <i className="fas fa-folder-open me-2"></i> Vedi Progetti
+                </a>
+
+                <button
+                  className="btn btn-link text-light fs-4 text-decoration-none ms-md-3"
+                  onClick={() =>
+                    document
+                      .getElementById("profilo")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  <i className="fas fa-chevron-down"></i>
+                </button>
+              </div>
+            </div>
+
+            {/* BLOCCO DESTRA */}
+            <div className="col-md-5 d-none d-md-block text-center">
+              <div className="card bg-secondary bg-opacity-10 border-0 p-4 shadow-sm">
+                <h5 className="fw-bold mb-2">Stack principale</h5>
+
+                <div className="d-flex flex-wrap justify-content-center gap-2">
+                  <span className="badge bg-primary">React</span>
+                  <span className="badge bg-primary">Node.js</span>
+                  <span className="badge bg-primary">Express</span>
+                  <span className="badge bg-primary">MySQL</span>
+                  <span className="badge bg-primary">Bootstrap</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* PROFILO */}
-      <section className="container mb-5">
+      <section id="profilo" className="container mb-5">
         <div className="card shadow-sm p-4">
           <h2 className="section-title mb-3">Profilo</h2>
 
