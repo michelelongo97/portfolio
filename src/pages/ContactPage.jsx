@@ -55,20 +55,20 @@ export default function ContactPage() {
             📍 <strong>Località:</strong> Italia
           </p>
           <p>
-            ✉️ <strong>Email:</strong> tuamail@email.com
+            ✉️ <strong>Email:</strong> {import.meta.env.VITE_EMAIL}
           </p>
 
           <p>
             💻 <strong>GitHub:</strong>{" "}
-            <a href="https://github.com/tuonome" target="_blank">
-              github.com/tuonome
+            <a href={import.meta.env.VITE_SOCIAL_GITHUB} target="_blank">
+              {import.meta.env.VITE_SOCIAL_GITHUB}
             </a>
           </p>
 
           <p>
             🔗 <strong>LinkedIn:</strong>{" "}
-            <a href="https://linkedin.com/in/tuonome" target="_blank">
-              linkedin.com/in/tuonome
+            <a href={import.meta.env.VITE_SOCIAL_LINKEDIN} target="_blank">
+              {import.meta.env.VITE_SOCIAL_LINKEDIN}
             </a>
           </p>
 

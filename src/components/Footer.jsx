@@ -9,7 +9,7 @@ export default function Footer() {
 
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-2">
               <a
-                href="https://github.com/tuonome"
+                href={import.meta.env.VITE_SOCIAL_GITHUB}
                 target="_blank"
                 className="text-light fs-4"
               >
@@ -17,15 +17,19 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://linkedin.com/in/tuonome"
+                href={import.meta.env.VITE_SOCIAL_LINKEDIN}
                 target="_blank"
                 className="text-light fs-4"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
 
-              <a href="mailto:tuamail@email.com" className="text-light fs-4">
-                <i className="fas fa-envelope"></i>
+              <a
+                href={import.meta.env.VITE_SOCIAL_INSTAGRAM}
+                target="_blank"
+                className="text-light fs-4"
+              >
+                <i className="fab fa-instagram"></i>
               </a>
             </div>
           </div>

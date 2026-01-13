@@ -1,3 +1,6 @@
+import { projects } from "../api/projects";
+import ProjectCard from "../components/ProjectCard";
+
 export default function HomePage() {
   const skills = [
     { name: "React", icon: "fab fa-react", desc: "Hooks, Context, Routing" },
@@ -7,6 +10,8 @@ export default function HomePage() {
     { name: "Bootstrap", icon: "fab fa-bootstrap", desc: "UI responsive" },
     { name: "Git & GitHub", icon: "fab fa-github", desc: "Versioning" },
   ];
+
+  const featuredProjects = projects.slice(0, 3);
 
   return (
     <>
@@ -26,9 +31,9 @@ export default function HomePage() {
       </div>
 
       {/* SKILLS */}
-      <h2 className="section-title text-center">Il mio stack</h2>
+      <h2 className="section-title text-center mb-4">Il mio stack</h2>
 
-      <div className="row g-4">
+      <div className="row g-4 mb-5">
         {skills.map((skill, i) => (
           <div key={i} className="col-md-4 col-sm-6">
             <div className="card text-center p-4 shadow-sm h-100">
@@ -39,6 +44,23 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+
+      {/* PROGETTI IN EVIDENZA */}
+      <section className="container mb-5">
+        <h2 className="section-title text-center mb-4">Progetti in evidenza</h2>
+
+        <div className="row g-4 mb-4">
+          {featuredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+
+        <div className="text-center">
+          <a href="/projects" className="btn btn-dark btn-lg">
+            Vedi tutti i progetti →
+          </a>
+        </div>
+      </section>
     </>
   );
 }
