@@ -14,7 +14,7 @@ export default function AboutPage() {
 
   return (
     <div className="container">
-      <h1 className="section-title text-center mb-4">Chi sono</h1>
+      <h1 className="section-title text-center mb-4 ">Chi sono</h1>
 
       {/* PROFILO */}
       <div className="card shadow-sm p-4 mb-5">

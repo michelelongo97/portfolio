@@ -35,7 +35,7 @@ export default function Header() {
               className="nav-link"
               to="/projects"
             >
-              Projects
+              Progetti
             </NavLink>
           </li>
           <li>
@@ -44,7 +44,7 @@ export default function Header() {
               className="nav-link"
               to="/about"
             >
-              About
+              Chi Sono
             </NavLink>
           </li>
           <li>
@@ -53,7 +53,7 @@ export default function Header() {
               className="nav-link"
               to="/contact"
             >
-              Contact
+              Contattami
             </NavLink>
           </li>
           <li>

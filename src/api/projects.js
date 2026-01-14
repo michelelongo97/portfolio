@@ -4,7 +4,7 @@ export const projects = [
     title: "CostaFisioFitness | Studio di fisioterapia",
     description:
       "Sito vetrina per uno studio di fisioterapia a Gravina in Puglia, sviluppato con React per garantire un’interfaccia moderna e responsive. Il progetto è pensato per migliorare la presenza online dell’attività e facilitare il contatto con i pazienti.",
-    stack: ["React", "Bootstrap"],
+    stack: ["React"],
     github: "https://github.com/michelelongo97/FisioFitness",
     demo: "https://costafisiofitness.it/",
     image: "images/projects/fisiofitness.jpg",

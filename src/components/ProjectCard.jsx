@@ -37,7 +37,7 @@ export default function ProjectCard({ project }) {
             <a
               href={project.demo}
               target="_blank"
-              className="btn btn-outline-primary btn-sm w-50"
+              className="btn btn-outline-dark btn-lg btn-sm w-50"
             >
               <i className="fas fa-globe me-1"></i> Live
             </a>
@@ -46,7 +46,7 @@ export default function ProjectCard({ project }) {
           {/* LINK DETTAGLIO */}
           <Link
             to={`/projects/${project.id}`}
-            className="btn btn-link btn-sm mt-2 p-0"
+            className="btn btn-outline-dark btn-lg btn-sm mt-2 p-0"
           >
             Dettagli progetto →
           </Link>

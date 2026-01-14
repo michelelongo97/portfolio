@@ -55,7 +55,7 @@ export default function ProjectDetailPage() {
 
           {project.demo !== "#" && (
             <a
-              className="btn btn-outline-primary"
+              className="btn btn-outline-dark "
               href={project.demo}
               target="_blank"
               rel="noreferrer"

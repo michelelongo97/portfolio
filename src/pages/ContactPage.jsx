@@ -41,7 +41,7 @@ export default function ContactPage() {
               onChange={handleChange}
             />
 
-            <button className="btn btn-primary w-100">Invia messaggio</button>
+            <button className="btn btn-danger w-100">Invia messaggio</button>
           </form>
         </div>
       </div>
@@ -60,14 +60,22 @@ export default function ContactPage() {
 
           <p>
             💻 <strong>GitHub:</strong>{" "}
-            <a href={import.meta.env.VITE_SOCIAL_GITHUB} target="_blank">
+            <a
+              href={import.meta.env.VITE_SOCIAL_GITHUB}
+              target="_blank"
+              className="text-danger"
+            >
               {import.meta.env.VITE_SOCIAL_GITHUB}
             </a>
           </p>
 
           <p>
             🔗 <strong>LinkedIn:</strong>{" "}
-            <a href={import.meta.env.VITE_SOCIAL_LINKEDIN} target="_blank">
+            <a
+              href={import.meta.env.VITE_SOCIAL_LINKEDIN}
+              target="_blank"
+              className="text-danger"
+            >
               {import.meta.env.VITE_SOCIAL_LINKEDIN}
             </a>
           </p>
