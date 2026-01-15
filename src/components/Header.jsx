@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-black px-4 py-3">
       <NavLink className="navbar-brand" to="/">
-        Portfolio <span>di</span> <span>Michele Longo</span>
+        <img src="../images/logo.png" alt="logo" />
       </NavLink>
 
       {/* HAMBURGER */}

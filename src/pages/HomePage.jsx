@@ -31,7 +31,7 @@ export default function HomePage() {
             className="card profile-card p-4 mx-auto"
             style={{ maxWidth: "880px" }}
           >
-            <h2 className="section-title mb-3">Profilo</h2>
+            <h2 className="section-title mb-3 pb-3">Profilo</h2>
 
             <p>
               Dopo un primo approccio alla programmazione durante il liceo e
@@ -57,7 +57,7 @@ export default function HomePage() {
 
         {/* PROGETTI */}
         <section className="my-5">
-          <h2 className="section-title text-center mb-4">
+          <h2 className="section-title text-center mb-4 p-4">
             Progetti in evidenza
           </h2>
 
@@ -76,7 +76,7 @@ export default function HomePage() {
 
         {/* SKILLS */}
         <section className="my-5">
-          <h2 className="section-title text-center mb-4">
+          <h2 className="section-title text-center mb-4 p-4">
             Competenze tecniche
           </h2>
 

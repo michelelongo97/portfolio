@@ -23,6 +23,10 @@ main {
   min-height: 100vh;
 }
 
+.navbar-brand img {
+  height: 30px;
+}
+
 /* LINK */
 a {
   color: var(--text-main);
