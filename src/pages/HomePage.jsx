@@ -1,4 +1,5 @@
 import { projects } from "../api/projects";
+import HeroCarousel from "../components/HeroCasrousel";
 import ProjectCard from "../components/ProjectCard";
 
 export default function HomePage() {
@@ -20,43 +21,8 @@ export default function HomePage() {
 
   return (
     <>
-      {/* HERO */}
-      <section className="home-hero">
-        <div className="container h-100 d-flex flex-column justify-content-center align-items-center text-center">
-          <h1 className="display-4 fw-bold mb-3">
-            Ciao, sono <span className="text-danger">Michele Longo</span>
-          </h1>
-
-          <h2 className="fw-semibold mb-3">Junior Full Stack Developer</h2>
-
-          <p className="lead mb-4">
-            Sviluppo applicazioni web moderne con React, Node, Express e MySQL.
-          </p>
-
-          <div className="d-flex flex-wrap gap-3 justify-content-center">
-            <a
-              href={import.meta.env.VITE_CV}
-              className="btn btn-danger btn-lg"
-              target="_blank"
-            >
-              Scarica CV
-            </a>
-            <a href="/projects" className="btn btn-outline-dark btn-lg">
-              Vedi Progetti
-            </a>
-            <button
-              className="btn btn-link text-danger fs-4"
-              onClick={() =>
-                document
-                  .getElementById("profilo")
-                  .scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              <i className="fas fa-chevron-down"></i>
-            </button>
-          </div>
-        </div>
-      </section>
+      {/* HERO FULLSCREEN */}
+      <HeroCarousel />
 
       {/* PROFILO */}
       <section id="profilo" className="container my-5">

@@ -38,15 +38,7 @@ export default function Header() {
               Progetti
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              onClick={() => setOpen(false)}
-              className="nav-link"
-              to="/about"
-            >
-              Chi Sono
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               onClick={() => setOpen(false)}
