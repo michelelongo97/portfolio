@@ -24,6 +24,14 @@ const slides = [
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
 
+  const prevSlide = () => {
+    setIndex((i) => (i === 0 ? slides.length - 1 : i - 1));
+  };
+
+  const nextSlide = () => {
+    setIndex((i) => (i + 1) % slides.length);
+  };
+
   useEffect(() => {
     const timer = setInterval(
       () => setIndex((i) => (i + 1) % slides.length),
@@ -37,6 +45,13 @@ export default function HeroCarousel() {
   return (
     <section className="hero-pro d-flex align-items-center justify-content-center">
       <div className="container text-center hero-content">
+        <button className="hero-arrow hero-arrow-left" onClick={prevSlide}>
+          <i className="fas fa-chevron-left"></i>
+        </button>
+
+        <button className="hero-arrow hero-arrow-right" onClick={nextSlide}>
+          <i className="fas fa-chevron-right"></i>
+        </button>
         <h1 className="hero-title">{slide.title}</h1>
         <h2 className="hero-subtitle">{slide.subtitle}</h2>
         <p className="hero-desc">{slide.text}</p>
