@@ -67,7 +67,8 @@ a:hover {
 }
 
 .skills .card:hover {
-  color: #dc3545;
+  color: var(--red);
+  transform: scale(1.2);
 }
 
 /* TESTI */
@@ -174,6 +175,11 @@ a:hover {
 
 .hero-scroll:hover {
   color: #fff;
+}
+
+.hero-pro a:hover i {
+  color: var(--red);
+  transform: scale(1.2);
 }
 
 /* FOOTER */

@@ -59,6 +59,31 @@ export default function HeroCarousel() {
             ></span>
           ))}
         </div>
+        <div className="d-flex justify-content-center gap-3 mt-5">
+          <a
+            href={import.meta.env.VITE_SOCIAL_GITHUB}
+            target="_blank"
+            className="text-light fs-4"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+
+          <a
+            href={import.meta.env.VITE_SOCIAL_LINKEDIN}
+            target="_blank"
+            className="text-light fs-4"
+          >
+            <i className="fab fa-linkedin"></i>
+          </a>
+
+          <a
+            href={import.meta.env.VITE_SOCIAL_INSTAGRAM}
+            target="_blank"
+            className="text-light fs-4"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+        </div>
         <button
           className="hero-scroll"
           onClick={() =>
