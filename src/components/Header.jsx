@@ -7,7 +7,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4 py-3 mb-4">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black px-4 py-3">
       <NavLink className="navbar-brand" to="/">
         Portfolio <span>di</span> <span>Michele Longo</span>
       </NavLink>

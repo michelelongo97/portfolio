@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-dark text-light mt-5 pt-5 pb-3">
+    <footer className="bg-black text-light mt-5 pt-5 pb-3">
       <div className="container">
         <div className="row text-center text-md-start">
           {/* COL SINISTRA - SOCIAL */}

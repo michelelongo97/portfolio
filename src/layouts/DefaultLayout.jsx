@@ -1,14 +1,26 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function DefaultLayout() {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+
   return (
     <>
       <Header />
-      <main className="container py-5 my-4">
-        <Outlet />
-      </main>
+
+      {/* HOME: hero full width, resto in container */}
+      {isHome ? (
+        <>
+          <Outlet />
+        </>
+      ) : (
+        <main className="container py-5">
+          <Outlet />
+        </main>
+      )}
+
       <Footer />
     </>
   );

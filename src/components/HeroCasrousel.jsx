@@ -59,6 +59,16 @@ export default function HeroCarousel() {
             ></span>
           ))}
         </div>
+        <button
+          className="hero-scroll"
+          onClick={() =>
+            document
+              .getElementById("profilo")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          <i className="fas fa-chevron-down"></i>
+        </button>
       </div>
     </section>
   );
