@@ -168,7 +168,7 @@ a:hover {
 /* HERO PRO */
 .hero-pro {
   width: 100vw;
-  min-height: 100vh;
+  height: calc(100vh - 74px);
   background: radial-gradient(circle at top, #1a1a1a, #000);
   color: white;
   position: relative;
@@ -244,7 +244,10 @@ a:hover {
 }
 
 .hero-scroll {
-  margin-top: 3rem;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
   background: none;
   border: none;
   color: var(--red);
