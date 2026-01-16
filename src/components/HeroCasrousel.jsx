@@ -100,16 +100,18 @@ export default function HeroCarousel() {
           </a>
         </div>
       </div>
-      <button
-        className="hero-scroll"
-        onClick={() =>
-          document
-            .getElementById("profilo")
-            .scrollIntoView({ behavior: "smooth" })
-        }
-      >
-        <i className="fas fa-chevron-down"></i>
-      </button>
+      <div className="hero-scroll-wrapper">
+        <button
+          className="hero-scroll"
+          onClick={() =>
+            document
+              .getElementById("profilo")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          <i className="fas fa-chevron-down"></i>
+        </button>
+      </div>
     </section>
   );
 }
