@@ -20,8 +20,8 @@ export default function ProjectsPage() {
         {allStacks.map((tech, i) => (
           <button
             key={i}
-            className={`btn btn-sm ${
-              filter === tech ? "btn-dark" : "btn-outline-dark"
+            className={`btn btn-sm filter-btn ${
+              filter === tech ? "filter-btn-active" : ""
             }`}
             onClick={() => setFilter(tech)}
           >

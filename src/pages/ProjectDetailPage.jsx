@@ -7,66 +7,75 @@ export default function ProjectDetailPage() {
 
   if (!project)
     return (
-      <div className="text-center mt-5">
+      <div className="container py-5 text-center">
         <h2>Progetto non trovato</h2>
-        <Link to="/projects" className="btn btn-dark mt-3">
+        <Link to="/projects" className="btn btn-danger mt-3">
           Torna ai progetti
         </Link>
       </div>
     );
 
   return (
-    <div className="container">
-      <div className="card shadow-sm p-4">
-        {/* IMMAGINE */}
+    <div className="container py-5">
+      {/* HEADER */}
+      <div className="project-header mb-5">
+        <Link to="/projects" className="project-back">
+          ← Progetti
+        </Link>
+
+        <h1 className="project-title mt-3">{project.title}</h1>
+        <p className="project-subtitle">{project.description}</p>
+      </div>
+
+      {/* IMAGE */}
+      <div className="project-image-wrapper mb-5">
         <img
           src={`/${project.image}`}
           alt={project.title}
-          className="img-fluid rounded mb-4"
-          style={{ maxHeight: "420px", objectFit: "cover" }}
+          className="project-image"
         />
+      </div>
 
-        {/* TITOLO */}
-        <h1 className="fw-bold mb-3">{project.title}</h1>
-
-        {/* DESCRIZIONE */}
-        <p className="lead">{project.description}</p>
-
+      {/* STACK + ACTIONS */}
+      <div className="row align-items-center g-4">
         {/* STACK */}
-        <h5 className="mt-4 mb-2">Stack utilizzato</h5>
-        <div className="mb-4">
-          {project.stack.map((tech, i) => (
-            <span key={i} className="badge bg-secondary me-2 mb-2">
-              {tech}
-            </span>
-          ))}
+        <div className="col-md-8">
+          <h6 className="text-uppercase text-muted mb-2">
+            Tecnologie utilizzate
+          </h6>
+
+          <div className="d-flex flex-wrap gap-2">
+            {project.stack.map((tech, i) => (
+              <span key={i} className="project-tech">
+                {tech}
+              </span>
+            ))}
+          </div>
         </div>
 
-        {/* BOTTONI */}
-        <div className="d-flex flex-wrap gap-2">
-          <a
-            className="btn btn-dark"
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <i className="fab fa-github me-2"></i> GitHub
-          </a>
-
-          {project.demo !== "#" && (
+        {/* BUTTONS */}
+        <div className="col-md-4 text-md-end">
+          <div className="d-flex flex-wrap gap-2 justify-content-md-end">
             <a
-              className="btn btn-outline-dark "
-              href={project.demo}
+              href={project.github}
               target="_blank"
               rel="noreferrer"
+              className="btn btn-outline-dark"
             >
-              <i className="fas fa-globe me-2"></i> Live
+              <i className="fab fa-github me-2"></i> GitHub
             </a>
-          )}
 
-          <Link to="/projects" className="btn btn-outline-secondary ms-auto">
-            ← Torna ai progetti
-          </Link>
+            {project.demo !== "#" && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-danger"
+              >
+                <i className="fas fa-globe me-2"></i> Live
+              </a>
+            )}
+          </div>
         </div>
       </div>
     </div>
