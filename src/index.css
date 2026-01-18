@@ -427,3 +427,17 @@ footer i {
   background: var(--red-hover);
   transform: scale(1.05);
 }
+@media (max-width: 768px) {
+  .hero-arrow {
+    font-size: 1.4rem;
+    opacity: 0.6;
+  }
+
+  .hero-arrow-left {
+    left: 0.5rem;
+  }
+
+  .hero-arrow-right {
+    right: 0.5rem;
+  }
+}
