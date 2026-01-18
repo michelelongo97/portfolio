@@ -1,6 +1,7 @@
 import { projects } from "../api/projects";
 import HeroCarousel from "../components/HeroCasrousel";
 import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   const skills = [
@@ -68,9 +69,9 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <a href="/projects" className="btn btn-danger btn-lg">
+            <Link to="/projects" className="btn btn-danger btn-lg">
               Vedi tutti i progetti
-            </a>
+            </Link>
           </div>
         </section>
 
