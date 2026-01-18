@@ -88,6 +88,45 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+
+      <div className="col-12 mt-4">
+        <div className="card p-4 h-100 d-flex flex-column">
+          <h4 className="fw-bold mb-3 text-danger">
+            Certificazione Boolean Careers
+          </h4>
+
+          <p className="text-muted">
+            Ho completato il percorso intensivo Full Stack Web Developer presso
+            Boolean Careers, un corso di 600 ore pensato per insegnare le
+            competenze necessarie per diventare Web Developer.
+          </p>
+
+          <p className="text-muted mb-2">
+            Durante la formazione ho acquisito competenze in:
+          </p>
+
+          <ul className="text-muted mb-4">
+            <li>HTML, CSS, JavaScript</li>
+            <li>React</li>
+            <li>Node.js ed Express</li>
+            <li>MySQL e API REST</li>
+            <li>TypeScript</li>
+            <li>Git e GitHub</li>
+          </ul>
+
+          {/* CTA */}
+          <div className="mt-auto text-end">
+            <a
+              href={import.meta.env.VITE_CERTIFICAZIONE}
+              target="_blank"
+              rel="noreferrer"
+              className="project-detail-link"
+            >
+              Visualizza certificazione →
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
