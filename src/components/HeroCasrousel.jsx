@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const slides = [
   {
@@ -56,14 +57,20 @@ export default function HeroCarousel() {
         <h2 className="hero-subtitle">{slide.subtitle}</h2>
         <p className="hero-desc">{slide.text}</p>
 
-        <a
-          href={slide.cta.link}
-          className="btn btn-danger btn-lg mt-3"
-          target={slide.cta.link.startsWith("http") ? "_blank" : undefined}
-          rel="noreferrer"
-        >
-          {slide.cta.label}
-        </a>
+        {slide.cta.link.startsWith("http") ? (
+          <a
+            href={slide.cta.link}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-danger btn-lg mt-3"
+          >
+            {slide.cta.label}
+          </a>
+        ) : (
+          <Link to={slide.cta.link} className="btn btn-danger btn-lg mt-3">
+            {slide.cta.label}
+          </Link>
+        )}
 
         <div className="hero-dots">
           {slides.map((_, i) => (
