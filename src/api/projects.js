@@ -37,7 +37,7 @@ export const projects = [
       "Sito portfolio personale sviluppato con React per raccogliere e presentare i miei progetti, competenze e contatti in modo ordinato e professionale, come supporto alla ricerca di opportunità lavorative.",
     stack: ["React", "Bootstrap"],
     github: "https://github.com/michelelongo97/portfolio",
-    demo: "#",
+    demo: "https://portfolio-ml-five.vercel.app/",
     image: "images/projects/portfolio.jpg",
   },
 ];
