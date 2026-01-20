@@ -35,7 +35,7 @@ export default function HeroCarousel() {
   useEffect(() => {
     const timer = setInterval(
       () => setIndex((i) => (i + 1) % slides.length),
-      6000
+      6000,
     );
     return () => clearInterval(timer);
   }, []);
@@ -78,6 +78,7 @@ export default function HeroCarousel() {
           <a
             href={import.meta.env.VITE_SOCIAL_GITHUB}
             target="_blank"
+            rel="noreferrer"
             className="text-light fs-4"
           >
             <i className="fab fa-github"></i>
@@ -86,6 +87,7 @@ export default function HeroCarousel() {
           <a
             href={import.meta.env.VITE_SOCIAL_LINKEDIN}
             target="_blank"
+            rel="noreferrer"
             className="text-light fs-4"
           >
             <i className="fab fa-linkedin"></i>
@@ -94,6 +96,7 @@ export default function HeroCarousel() {
           <a
             href={import.meta.env.VITE_SOCIAL_INSTAGRAM}
             target="_blank"
+            rel="noreferrer"
             className="text-light fs-4"
           >
             <i className="fab fa-instagram"></i>

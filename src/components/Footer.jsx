@@ -11,6 +11,7 @@ export default function Footer() {
               <a
                 href={import.meta.env.VITE_SOCIAL_GITHUB}
                 target="_blank"
+                rel="noreferrer"
                 className="text-light fs-4"
               >
                 <i className="fab fa-github"></i>
@@ -19,6 +20,7 @@ export default function Footer() {
               <a
                 href={import.meta.env.VITE_SOCIAL_LINKEDIN}
                 target="_blank"
+                rel="noreferrer"
                 className="text-light fs-4"
               >
                 <i className="fab fa-linkedin"></i>
@@ -27,6 +29,7 @@ export default function Footer() {
               <a
                 href={import.meta.env.VITE_SOCIAL_INSTAGRAM}
                 target="_blank"
+                rel="noreferrer"
                 className="text-light fs-4"
               >
                 <i className="fab fa-instagram"></i>
