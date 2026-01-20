@@ -25,15 +25,6 @@ export default function Footer() {
               >
                 <i className="fab fa-linkedin"></i>
               </a>
-
-              <a
-                href={import.meta.env.VITE_SOCIAL_INSTAGRAM}
-                target="_blank"
-                rel="noreferrer"
-                className="text-light fs-4"
-              >
-                <i className="fab fa-instagram"></i>
-              </a>
             </div>
           </div>
 
