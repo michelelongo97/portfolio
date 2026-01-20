@@ -1,14 +1,57 @@
 import { useState } from "react";
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("Backend in arrivo 😉");
+
+    if (!formData.name || !formData.email || !formData.message) {
+      alert("Compila tutti i campi");
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+        alert("Messaggio inviato correttamente");
+      } else {
+        alert("Errore nell'invio");
+      }
+    } catch (error) {
+      alert("Errore di rete");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -24,6 +67,7 @@ export default function ContactPage() {
               name="name"
               placeholder="Nome"
               onChange={handleChange}
+              value={formData.name}
             />
 
             <input
@@ -31,6 +75,7 @@ export default function ContactPage() {
               name="email"
               placeholder="Email"
               onChange={handleChange}
+              value={formData.email}
             />
 
             <textarea
@@ -39,9 +84,12 @@ export default function ContactPage() {
               rows="5"
               placeholder="Messaggio"
               onChange={handleChange}
+              value={formData.message}
             />
 
-            <button className="btn btn-danger w-100">Invia messaggio</button>
+            <button className="btn btn-danger w-100" disabled={loading}>
+              {loading ? "Invio in corso..." : "Invia messaggio"}
+            </button>
           </form>
         </div>
       </div>
@@ -64,6 +112,7 @@ export default function ContactPage() {
               href={import.meta.env.VITE_SOCIAL_GITHUB}
               target="_blank"
               className="text-danger"
+              rel="noreferrer"
             >
               {import.meta.env.VITE_SOCIAL_GITHUB}
             </a>
@@ -75,6 +124,7 @@ export default function ContactPage() {
               href={import.meta.env.VITE_SOCIAL_LINKEDIN}
               target="_blank"
               className="text-danger"
+              rel="noreferrer"
             >
               {import.meta.env.VITE_SOCIAL_LINKEDIN}
             </a>
