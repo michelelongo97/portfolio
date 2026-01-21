@@ -3,9 +3,19 @@ export default function Footer() {
     <footer className="bg-black text-light mt-5 pt-5 pb-3">
       <div className="container">
         <div className="row text-center text-md-start">
-          {/* COL SINISTRA - SOCIAL */}
+          {/* COL SINISTRA - CONTATTI */}
           <div className="col-md-6 mb-4">
-            <h5 className="fw-bold">Seguimi</h5>
+            <h5 className="fw-bold">Contatti</h5>
+
+            <p className="mb-2">
+              ✉️{" "}
+              <a
+                href={`mailto:${import.meta.env.VITE_EMAIL}`}
+                className="text-light text-decoration-none"
+              >
+                {import.meta.env.VITE_EMAIL}
+              </a>
+            </p>
 
             <div className="d-flex justify-content-center justify-content-md-start gap-3 mt-2">
               <a
@@ -31,10 +41,12 @@ export default function Footer() {
           {/* COL DESTRA - INFO */}
           <div className="col-md-6 mb-4 text-md-end">
             <h5 className="fw-bold">Michele Longo</h5>
-            <p className="mb-1">
-              Junior Full Stack Developer – React | Express | MySQL
-            </p>
-            <small>
+
+            <p className="mb-1">Junior Full Stack Developer</p>
+
+            <p className="text-muted mb-2">React · Node.js · Express · MySQL</p>
+
+            <small className="text-muted">
               © {new Date().getFullYear()} Tutti i diritti riservati
             </small>
           </div>

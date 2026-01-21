@@ -25,7 +25,7 @@ export default function ProjectCard({ project }) {
               rel="noreferrer"
               className="btn btn-danger btn-sm"
             >
-              <i className="fas fa-globe me-1"></i> Live
+              <i className="fas fa-globe me-1"></i>Visita il sito →
             </a>
           </div>
         </div>

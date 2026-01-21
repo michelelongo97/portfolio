@@ -60,7 +60,7 @@ export default function ProjectDetailPage() {
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-outline-dark"
+              className="btn btn-github"
             >
               <i className="fab fa-github me-2"></i> GitHub
             </a>
@@ -72,7 +72,7 @@ export default function ProjectDetailPage() {
                 rel="noreferrer"
                 className="btn btn-danger"
               >
-                <i className="fas fa-globe me-2"></i> Live
+                <i className="fas fa-globe me-2"></i>Visita il sito →
               </a>
             )}
           </div>

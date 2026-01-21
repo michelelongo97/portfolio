@@ -190,6 +190,20 @@ a:hover {
   transform: translateX(4px);
 }
 
+/* GITHUB BUTTON FIX */
+
+.btn-github {
+  background: transparent;
+  border: 1px solid var(--text-main);
+  color: var(--text-main);
+  transition: all 0.25s ease;
+}
+
+.btn-github:hover {
+  background-color: var(--text-main);
+  color: var(--red-hover);
+}
+
 /* TESTI */
 .text-muted {
   color: var(--text-muted) !important;
