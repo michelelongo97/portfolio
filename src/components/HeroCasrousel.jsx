@@ -6,19 +6,19 @@ const slides = [
     title: "Ciao, sono Michele Longo",
     subtitle: "Junior Full Stack Developer",
     text: "Creo interfacce moderne e applicazioni web funzionali usando React, Node ed Express.",
-    cta: { label: "Scarica CV", link: import.meta.env.VITE_CV },
+    cta: { label: "Scarica CV", link: import.meta.env.VITE_CV, external: true },
   },
   {
     title: "Il mio approccio",
     subtitle: "Pulizia. Performance. Esperienza utente.",
     text: "Mi piace scrivere codice ordinato, progettare UI intuitive e trasformare idee in prodotti reali.",
-    cta: { label: "Vedi Progetti", link: "/projects" },
+    cta: { label: "Vedi Progetti", link: "/projects", external: false },
   },
   {
     title: "Il mio obiettivo",
     subtitle: "Entrare in un team e crescere",
     text: "Cerco una realtà dove poter imparare ogni giorno e contribuire allo sviluppo di soluzioni digitali di valore.",
-    cta: { label: "Contattami", link: "/contact" },
+    cta: { label: "Contattami", link: "/contact", external: false },
   },
 ];
 
@@ -57,7 +57,7 @@ export default function HeroCarousel() {
         <h2 className="hero-subtitle">{slide.subtitle}</h2>
         <p className="hero-desc">{slide.text}</p>
 
-        {slide.cta.link.startsWith("http") ? (
+        {slide.cta.external ? (
           <a
             href={slide.cta.link}
             target="_blank"
