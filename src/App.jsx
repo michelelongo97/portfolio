@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
 import ProjectDetailPage from "./pages/ProjectDetailPage";
+import PageNotFound from "./pages/PageNotFound";
 import ScollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects/:id" element={<ProjectDetailPage />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
