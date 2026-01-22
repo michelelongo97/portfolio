@@ -25,12 +25,40 @@ const slides = [
 export default function HeroCarousel() {
   const [index, setIndex] = useState(0);
 
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
   const prevSlide = () => {
     setIndex((i) => (i === 0 ? slides.length - 1 : i - 1));
   };
 
   const nextSlide = () => {
     setIndex((i) => (i + 1) % slides.length);
+  };
+
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+
+    if (distance > minSwipeDistance) {
+      nextSlide(); // swipe sinistra
+    }
+
+    if (distance < -minSwipeDistance) {
+      prevSlide(); // swipe destra
+    }
   };
 
   useEffect(() => {
@@ -44,7 +72,12 @@ export default function HeroCarousel() {
   const slide = slides[index];
 
   return (
-    <section className="hero-pro d-flex align-items-center justify-content-center">
+    <section
+      className="hero-pro d-flex align-items-center justify-content-center"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <div className="container text-center hero-content">
         <button className="hero-arrow hero-arrow-left" onClick={prevSlide}>
           <i className="fas fa-chevron-left"></i>

@@ -321,6 +321,7 @@ a:hover {
 
 .hero-pro i {
   color: var(--text-main);
+  touch-action: pan-y;
   transition:
     color 0.2s ease,
     transform 0.2s ease;
