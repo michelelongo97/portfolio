@@ -1,16 +1,130 @@
-# React + Vite
+# Portfolio | Michele Longo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🎉 Benvenuto nel mio portfolio personale! Questo progetto è stato sviluppato per mostrare i miei lavori, competenze e il mio percorso come **Junior Full Stack Developer**.
 
-Currently, two official plugins are available:
+Il sito è realizzato in **React** e ottimizzato per una navigazione fluida, responsive e moderna.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔹 Features principali
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Portfolio realizzato in **React**
+- Navigazione fluida con **Single Page Application**
+- Layout moderno e pulito
+- Design **responsive** (desktop & mobile)
+- Stilizzazione tramite **Bootstrap** e CSS personalizzato
+- Sezione progetti con link ai siti live
+- Form di contatto funzionante
+- Deploy con **dominio personalizzato** (`longomichele.it`)
+- **Dark & Light Mode** manuale
+- Gestione variabili ambiente tramite `.env`
+- Routing con **fallback NotFound**
+- Redirect e rewrite configurati su **Vercel**
+- Swipe touch su mobile per il carosello
+- Meta tag Open Graph per anteprime social (LinkedIn, WhatsApp, ecc.)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Bootstrap
+- **Styling:** CSS personalizzato con variabili per Dark/Light mode
+- **Deploy:** Vercel
+- **Tools:** Env variables, SPA routing, Open Graph meta tags
+
+---
+
+## 📂 Struttura del progetto
+
+# Portfolio | Michele Longo
+
+🎉 Benvenuto nel mio portfolio personale! Questo progetto è stato sviluppato per mostrare i miei lavori, competenze e il mio percorso come **Junior Full Stack Developer**.
+
+Il sito è realizzato in **React** e ottimizzato per una navigazione fluida, responsive e moderna.
+
+---
+
+## 🔹 Features principali
+
+- Portfolio realizzato in **React**
+- Navigazione fluida con **Single Page Application**
+- Layout moderno e pulito
+- Design **responsive** (desktop & mobile)
+- Stilizzazione tramite **Bootstrap** e CSS personalizzato
+- Sezione progetti con link ai siti live
+- Form di contatto funzionante
+- Deploy con **dominio personalizzato** (`longomichele.it`)
+- **Dark & Light Mode** manuale
+- Gestione variabili ambiente tramite `.env`
+- Routing con **fallback NotFound**
+- Redirect e rewrite configurati su **Vercel**
+- Swipe touch su mobile per il carosello
+- Meta tag Open Graph per anteprime social (LinkedIn, WhatsApp, ecc.)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, React Router, Bootstrap
+- **Styling:** CSS personalizzato con variabili per Dark/Light mode
+- **Deploy:** Vercel
+- **Tools:** Env variables, SPA routing, Open Graph meta tags
+
+---
+
+## 📂 Struttura del progetto
+
+/public
+/images # Immagini del portfolio e favicon
+/src
+/components # Componenti riutilizzabili (Header, Footer, HeroCarousel...)
+/layouts # Layout principali (DefaultLayout)
+/pages # Pagine: Home, Projects, ProjectDetail, Contact, PrivacyPolicy, CookiePolicy
+/api # Mock API per progetti e dati
+main.jsx # Entry point React
+index.css # Stili globali
+
+---
+
+## 🚀 Installazione locale
+
+1. Clona il repository:
+
+```bash
+git clone https://github.com/michelelongo97/portfolio.git
+
+2.
+cd portfolio
+
+3.
+npm install
+
+4.
+Crea un file .env in root con le variabili:
+
+VITE_CV=/path/al/tuo/CV.pdf
+VITE_EMAIL=tuo@email.com
+VITE_SOCIAL_GITHUB=https://github.com/tuo-username
+VITE_SOCIAL_LINKEDIN=https://linkedin.com/in/tuo-profilo
+
+
+Avvia il progetto in locale:
+
+npm run dev
+
+
+Apri http://localhost:5173 per vedere il portfolio.
+
+🌐 Deploy
+
+Il progetto è deployato su Vercel e disponibile online all’indirizzo:
+
+https://longomichele.it
+
+
+📜 Licenza
+
+Questo progetto è open source e disponibile per uso personale e referenze professionali.
+
+Michele Longo – Junior Full Stack Developer
+```
