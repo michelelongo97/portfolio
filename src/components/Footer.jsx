@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-light mt-5 pt-5 pb-3">
@@ -11,7 +13,7 @@ export default function Footer() {
               ✉️{" "}
               <a
                 href={`mailto:${import.meta.env.VITE_EMAIL}`}
-                className="text-light text-decoration-none"
+                className="text-light text-decoration-none link-hover"
               >
                 {import.meta.env.VITE_EMAIL}
               </a>
@@ -50,6 +52,28 @@ export default function Footer() {
               © {new Date().getFullYear()} Tutti i diritti riservati
             </small>
           </div>
+        </div>
+
+        {/* LINEA */}
+        <hr className="border-secondary my-4" />
+
+        {/* POLICY */}
+        <div className="text-center">
+          <small className="text-muted">
+            <Link
+              to="/privacy-policy"
+              className="text-muted text-decoration-none link-hover"
+            >
+              Privacy Policy
+            </Link>
+            {" | "}
+            <Link
+              to="/cookie-policy"
+              className="text-muted text-decoration-none link-hover"
+            >
+              Cookie Policy
+            </Link>
+          </small>
         </div>
       </div>
     </footer>

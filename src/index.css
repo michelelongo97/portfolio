@@ -375,6 +375,10 @@ footer i {
   transition: all 0.2s ease;
 }
 
+.link-hover:hover {
+  color: #dc3545 !important;
+}
+
 /* PROJECT DETAIL – CLEAN STYLE */
 
 .project-header {
